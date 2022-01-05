@@ -40,11 +40,16 @@ export class TodosComponent implements OnInit {
   }
   
   addTodo () {
+    if(this.inputTodo){
     this.todos.push({
       content: this.inputTodo,
       completed: false
     });
 
     this.inputTodo ="";
+  }else{
+    alert("Todo should not be empty")
+  }
+    
   }
 }
